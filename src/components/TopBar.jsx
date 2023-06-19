@@ -11,6 +11,17 @@ const TopBar = () => {
           Get 50% off on selected items | <a href="#">Shop Now</a>
         </p>
       </div>
+      <div className="bar-localization">
+        <ul>
+          <li>
+            Eng<span className="material-symbol-outlined">expand_more</span>
+          </li>
+          <li>
+            Location
+            <span className="material-symbol-outlined">expand_more</span>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
