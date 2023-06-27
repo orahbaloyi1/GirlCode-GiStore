@@ -1,9 +1,17 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import TopBar from "./components/TopBar";
-import MenuBar from "./components/MenuBar";
+import Home from "./pages/Home";
+import Category from "./pages/Category";
 
 function App() {
-  return <>GirlCode Store</>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/category/:CatName" element={<Category />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

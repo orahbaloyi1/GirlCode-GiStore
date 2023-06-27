@@ -1,2 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kablammo&family=Manrope:wght@200;300;400;500;600;700;800&family=Pacifico&family=Roboto:wght@300;400&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+.top-bar {
+  background: salmon;
+  padding: 10px 0px;
+}
+.bar-contact a {
+  color: white;
+  text-decoration: none;
+}
+.bar-contact a span {
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.bar-cta p {
+  color: white;
+  margin: 0;
+}
+
+.bar-cta p a {
+  color: white;
+}
+
+.bar-localisation ul {
+  color: white;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 24px;
+}
+.bar-localisation ul li span {
+  vertical-align: middle;
+  font-size: 18px;
+}
+/*.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+}*/
+.nav-logo img {
+  max-width: 100%;
+}
+.nav-logo {
+  display: block;
+  width: 150px;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+li .material-symbols-outlined {
+  vertical-align: middle;
+}
+.nav-Search-Acc-cart {
+  display: flex;
+  gap: 20px;
+}
+.nav-Search-Acc-cart span {
+  vertical-align: middle;
+  font-size: 16px;
+}
+.nav-Search-Acc-cart a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+.nav-search {
+  border: 1px solid ghostwhite;
+  border-radius: 30px;
+  background-color: ghostwhite;
+  padding: 5px 30px;
+}
+.nav-search input {
+  border: none;
+  background-color: ghostwhite;
+  font-weight: 600;
+  outline: 0;
+}
