@@ -56,11 +56,11 @@ const CategorySection = () => {
         <div className="grid grid-cols-6 gap-8">
           {catList.map((cat) => (
             <Link
-              to={cat.path}
+              to={"/category/${cat.slug}"}
               className="rounded-xl overflow-hidden relative"
-              key={cat.name}
+              key={cat.id}
             >
-              <img src={furnImg} alt={"${cat.name} Category"} />
+              <img src={cat.img} alt={"${cat.name} Category"} />
               <h3 className="absolute top-3 left-1/2 text-xl font-extrabold text-girlcode-pink -translate-x-1/2">
                 {cat.name}
               </h3>
