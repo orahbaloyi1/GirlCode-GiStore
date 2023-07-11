@@ -7,15 +7,13 @@ const CategorySection = () => {
   const [catList, setCatList] = useState([]);
 
   useEffect(() => {
-    // console.log("Pull Cat List");
-    fetch("http://127.0.0.1:5000/categories") //fetch data from backend to frontend
-      .then((resp) => resp.json()) // handle the promise respond & convert to json
+    fetch(`http://127.0.0.1:5000/categories`)
+      .then((resp) => resp.json())
       .then((resp) => {
-        // console.log(resp.categories);
         setCatList(resp.categories);
       })
       .catch((error) => {
-        console.log(error); //catches error
+        console.log(error);
       });
   }, []);
 
@@ -56,11 +54,14 @@ const CategorySection = () => {
         <div className="grid grid-cols-6 gap-8">
           {catList.map((cat) => (
             <Link
-              to={"/category/${cat.slug}"}
+              to={`/category/${cat.slug}`}
               className="rounded-xl overflow-hidden relative"
               key={cat.id}
             >
-              <img src={cat.img} alt={"${cat.name} Category"} />
+              <img
+                src={`http://127.0.0.1:5000/image/${cat.img}`}
+                alt={`${cat.name} Category`}
+              />
               <h3 className="absolute top-3 left-1/2 text-xl font-extrabold text-girlcode-pink -translate-x-1/2">
                 {cat.name}
               </h3>

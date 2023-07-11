@@ -1,6 +1,20 @@
+import { useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
 
 const DealsSection = () => {
+  const [prodList, setProdList] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://127.0.0.1:5000/products`)
+      .then((resp) => resp.json())
+      .then((resp) => {
+        setProdList(resp.products);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <section className="pt-20">
       <div className="container mx-auto">
@@ -10,9 +24,9 @@ const DealsSection = () => {
           </h2>
         </div>
         <div className="grid grid-cols-3 gap-8">
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
+          {prodList.map((prod) => (
+            <ProductItem key={prod.id} prod_info={prod} />
+          ))}
         </div>
       </div>
     </section>
